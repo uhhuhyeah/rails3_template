@@ -21,7 +21,8 @@ run "rails generate jquery:install"
 run "rails generate rspec:install"
 run "rails generate cucumber:install"
 run "rails generate devise:install"
-run "rails generate devise User" if yes?("Generate Devise User?")
+puts "\n"
+run "rails generate devise User" if yes?("Generate Devise User?\n: ")
 
 # Setup Sass
 run "mkdir -p public/stylesheets/sass"
@@ -33,6 +34,8 @@ end
 # Download head.js and application layout
 inside('public/javascripts') do
   run "curl -O #{@git_repo}/raw/master/head.min.js"
+end
+inside('app/views/layouts') do
   run "curl -O #{@git_repo}/raw/master/application.html.erb"
 end
 
