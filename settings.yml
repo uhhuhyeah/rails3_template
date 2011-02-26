@@ -1,0 +1,10 @@
+development: &non_production_settings
+  site:
+    url: http://locahost:3000/
+
+production:
+  site:
+    url: TODO
+
+test:
+  <<: *non_production_settings
