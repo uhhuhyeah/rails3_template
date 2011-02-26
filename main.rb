@@ -36,6 +36,11 @@ inside('public/javascripts') do
   run "curl -O #{@git_repo}/raw/master/application.html.erb"
 end
 
+# Setup db
+rake "db:create"
+rake "db:migrate"
+rake "db:test:prepare"
+
 # Setup home page
 generate :controller, "welcome index" 
 route "root :to => 'welcome#index'"
@@ -45,5 +50,7 @@ git :init
 git :add => "."
 git :commit => "-am 'Initial Commit'"
 
-puts "Done.\n"
+puts "\n"
+puts "Template Tasks Complete"
+puts "\n"
 puts "Now go make it rain!"
