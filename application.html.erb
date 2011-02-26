@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @page_title || '' %></title>
+  <%= stylesheet_link_tag :all %>
+	<%= javascript_include_tag 'head.min' %>
+	<script type="text/javascript" charset="utf-8">
+		head.js("/javascripts/jquery.min.js", "/javascripts/rails.js", "/javascripts/application.js", function() {
+		   // all done
+		});
+	</script>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+	<div id="flash-holder">
+	  <%- flash.each do |key, msg| %>
+	    <%= content_tag :div, msg, :id => key %>
+	  <%- end %>
+	</div>
+	
+<%= yield %>
+
+</body>
+</html>

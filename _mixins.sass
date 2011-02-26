@@ -1,0 +1,73 @@
+!dark_grey = #585757
+!blue = #1d7e9e  
+
+=rounded(!padding_vert, !padding_hor, !r = 5px)
+  :padding = !padding_vert !padding_hor
+  :-webkit-border-radius = !r
+  :-moz-border-radius = !r
+  :border-radius = !r
+  -o-border-radius = !r
+  -icab-border-radius = !r
+  -khtml-border-radius = !r
+  
+  
+=rounded_right(!padding_vert, !padding_hor, !r = 5px)
+  :padding = !padding_vert !padding_hor
+  :-webkit-border-top-right-radius = !r
+  :-webkit-border-bottom-right-radius = !r
+  :-moz-border-radius-topright = !r
+  :-moz-border-radius-bottomright = !r
+  :border-top-right-radius = !r
+  :border-bottom-right-radius = !r
+  
+=rounded_left(!padding_vert, !padding_hor, !r = 5px)
+  :padding = !padding_vert !padding_hor
+  :-webkit-border-top-left-radius = !r
+  :-webkit-border-bottom-left-radius = !r
+  :-moz-border-radius-topleft = !r
+  :-moz-border-radius-bottomleft = !r
+  :border-top-left-radius = !r
+  :border-bottom-left-radius = !r
+  
+=rounded_top(!padding_vert, !padding_hor, !r = 5px)
+  :padding = !padding_vert !padding_hor
+  :-webkit-border-top-left-radius = !r
+  :-moz-border-radius-topleft = !r
+  :border-top-left-radius = !r
+  :-webkit-border-top-right-radius = !r
+  :-moz-border-radius-topright = !r
+  :border-top-right-radius = !r
+
+=rounded_bottom(!padding_vert, !padding_hor, !r = 5px)
+  :padding = !padding_vert !padding_hor
+  :-webkit-border-bottom-left-radius = !r
+  :-moz-border-radius-bottomleft = !r
+  :border-bottom-left-radius = !r
+  :-webkit-border-bottom-right-radius = !r
+  :-moz-border-radius-bottomright = !r
+  :border-bottom-right-radius = !r
+  
+=box_shadow
+  :-webkit-box-shadow 0 1px 10px rgba(0,0,0,.3)
+  :-moz-box-shadow 0 1px 10px rgba(0,0,0,.3)
+  :box-shadow 0 1px 10px rgba(0,0,0,.3)
+
+=text_shadow(!color = #fff)
+  :text-shadow 1px 0px 1px = !color
+    
+=trans_color
+  :-webkit-transition-duration 0.5s 
+  :-webkit-transition-property color 
+  :-webkit-transition-timing-function ease-out
+
+=trans_bg
+  :-webkit-transition-duration 0.5s 
+  :-webkit-transition-property background-color 
+  :-webkit-transition-timing-function ease-out
+
+// Glitchy
+=trans(!property)
+  :-webkit-transition-duration 0.5s 
+  :-webkit-transition-property = !property
+  :-webkit-transition-timing-function ease-out
+ 
