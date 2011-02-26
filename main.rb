@@ -52,5 +52,5 @@ git :commit => "-am 'Initial Commit'"
 
 puts "\n"
 puts "Template Tasks Complete"
-puts "\n"
 puts "Now go make it rain!"
+puts "\n"
