@@ -1,4 +1,4 @@
-@git_repo = "https://github.com/uhhuhyeah/rails3_template"
+@git_repo = "https://raw.github.com/uhhuhyeah/rails3_template"
 
 # Remove unwanted files
 run "rm public/index.html"
@@ -7,13 +7,13 @@ run "rm public/javascripts/rails.js"
 run "rm app/views/layouts/application.html.erb"
 
 # Grab standards gems
-run "curl -O #{@git_repo}/raw/master/Gemfile"
+run "curl -O #{@git_repo}/master/Gemfile"
 run "bundle install"
 
 # Load settings
 inside('config') do
-  run "curl -O #{@git_repo}/raw/master/load_settings.rb"
-  run "curl -O #{@git_repo}/raw/master/settings.yml"
+  run "curl -O #{@git_repo}/master/load_settings.rb"
+  run "curl -O #{@git_repo}/master/settings.yml"
 end
 
 # Run generators
@@ -27,16 +27,16 @@ run "rails generate devise User" if yes?("Generate Devise User?\n: ")
 # Setup Sass
 run "mkdir -p public/stylesheets/sass"
 inside('public/stylesheets/sass') do
-  run "curl -O #{@git_repo}/raw/master/screen.sass"
-  run "curl -O #{@git_repo}/raw/master/_mixins.sass"
+  run "curl -O #{@git_repo}/master/screen.sass"
+  run "curl -O #{@git_repo}/master/_mixins.sass"
 end
 
 # Download head.js and application layout
 inside('public/javascripts') do
-  run "curl -O #{@git_repo}/raw/master/head.min.js"
+  run "curl -O #{@git_repo}/master/head.min.js"
 end
 inside('app/views/layouts') do
-  run "curl -O #{@git_repo}/raw/master/application.html.erb"
+  run "curl -O #{@git_repo}/master/application.html.erb"
 end
 
 # Setup db
