@@ -5,7 +5,7 @@ gem 'rails', '3.0.4'
 gem 'mysql2'
 
 gem 'jquery-rails', '>= 0.2.6'
-gem 'haml'
+gem 'sass'
 gem 'devise'
 gem 'omniauth'
 # gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
